@@ -115,9 +115,13 @@ function makePoliceCar(){
  box(1.5,.12,.25,mat(0xef4444),0,1.35,-.15,g);
  for(const x of [-.78,.78]) for(const z of [-.75,.75]){
   const wheel=new THREE.Mesh(new THREE.CylinderGeometry(.22,.22,.14,12),darkMat);
-  wheel.rotation.z=Math.PI/2; wheel.position.set(x,.35,z); g.add(wheel);
+  wheel.rotation.z=Math.PI/2;
+  wheel.position.set(x,.35,z);
+  g.add(wheel);
  }
- ; scene.add(g); return g;
+ g.position.set(0,0,-20);
+ scene.add(g);
+ return g;
 }
 const police=makePoliceCar();
 
