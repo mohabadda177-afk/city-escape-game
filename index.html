@@ -191,9 +191,12 @@ function animate(now){
  if(jumping){player.position.y+=jumpV*dt;jumpV-=21*dt;if(player.position.y<=0){player.position.y=0;jumping=false;jumpV=0}}
  // Simple running bounce
  player.rotation.z=Math.sin(now*.012)*.025;
- police.position.z += speed * 0.35 * dt;
- if(police.position.z>player.position.z-4) {endGame();return}
- for(const o of obstacles){
+ police.position.z -= speed * 0.11 * dt;
+ if(police.position.z < player.position.z + 2) {
+  endGame();
+  return;
+}
+for(const o of obstacles){
    o.mesh.position.z+=speed*dt;
    if(!o.passed&&o.mesh.position.z>player.position.z-0.3){
      o.passed=true;
