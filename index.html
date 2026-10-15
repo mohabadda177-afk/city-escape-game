@@ -195,7 +195,7 @@ function animate(now){
  // Simple running bounce
  player.rotation.z=Math.sin(now*.012)*.025;
  police.position.z -= speed * 0.03 * dt;
- if(police.position.z < player.position.z + 2) {
+ if(police.position.z < player.position.z-1) {
   endGame();
   return;
 }
