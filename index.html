@@ -101,7 +101,8 @@ for(const x of [-5.25,5.25]) box(.45,.18,260,mat(0xcbd5e1),x,.02,-95);
 const player=new THREE.Group(); scene.add(player);
 box(.72,.85,.45,shirtMat,0,1.25,0,player);
 const head=new THREE.Mesh(new THREE.SphereGeometry(.28,16,12),skinMat); head.position.set(0,1.9,0); head.castShadow=true; player.add(head);
-const leftLeg = box(.18,.5,.2,pantsMat,-.2,.58,0,player); const rightLeg = box(.18,.5,.2,pantsMat,.2,.58,0,player);
+const leftLeg = const leftLeg = box(.18,.5,.2,pantsMat,-.2,.58,0,player);
+const rightLeg = box(.18,.5,.2,pantsMat,.2,.58,0,player); const rightLeg = box(.18,.5,.2,pantsMat,.2,.58,0,player);
 
 const leftArm = box(.17,.52,.18,skinMat,-.5,1.25,0,player);box(.17,.52,.18,skinMat,.5,1.25,0,player);
 player.position.set(0,0,3);
