@@ -145,7 +145,7 @@ function resetGame(){
  for(const o of obstacles) scene.remove(o.mesh); obstacles.length=0;
  for(const c of coins) scene.remove(c); coins.length=0;
  lane=0; player.position.set(0,0,3); jumping=false; jumpV=0; score=0; distance=0; speed=19; ended=false;
- police.position.z=-20; police.position.x=0;
+ police.position.set(0, 0, 10);
  for(let z=-22;z>-210;z-=8){if(Math.random()<.72)makeObstacle(Math.floor(Math.random()*3)-1,z);if(Math.random()<.8)makeCoin(Math.floor(Math.random()*3)-1,z-3,1.25+Math.random()*.5)}
  updateHUD();
 }
