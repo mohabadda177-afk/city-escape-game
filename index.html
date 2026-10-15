@@ -114,7 +114,7 @@ function makePoliceCar(){
   const wheel=new THREE.Mesh(new THREE.CylinderGeometry(.22,.22,.14,12),darkMat);
   wheel.rotation.z=Math.PI/2; wheel.position.set(x,.35,z); g.add(wheel);
  }
- g.position.set(0,0,-20); scene.add(g); return g;
+ ; scene.add(g); return g;
 }
 const police=makePoliceCar();
 
